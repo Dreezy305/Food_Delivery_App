@@ -7,6 +7,7 @@ import {
 import { Home } from "../screens";
 import { COLORS, icons } from "../constants";
 import { TabBarCustomButton } from "../components/TabBarCustomButton";
+import { CustomTabBar } from "../components/CustomTabBar";
 
 const Tab = createBottomTabNavigator();
 
@@ -19,6 +20,7 @@ export default function Tabs() {
         borderTopWidth: 0,
         elevation: 0,
       }}
+      tabBar={(props) => <CustomTabBar props={props} />}
     >
       <Tab.Screen
         name="Home"
