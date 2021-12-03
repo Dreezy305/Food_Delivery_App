@@ -34,6 +34,7 @@ export default function Tabs() {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
 
