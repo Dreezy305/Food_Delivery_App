@@ -41,6 +41,20 @@ export default function Home() {
             </Text>
           </View>
         </View>
+
+        <TouchableOpacity
+          style={{
+            width: 50,
+            paddingRight: SIZES.padding * 2,
+            justifyContent: "center",
+          }}
+        >
+          <Image
+            source={icons.basket}
+            resizeMode="contain"
+            style={{ width: 50, height: 30 }}
+          />
+        </TouchableOpacity>
       </View>
     );
   };
