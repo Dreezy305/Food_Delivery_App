@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,7 +10,19 @@ import {
 } from "react-native";
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
-export default function Home() {
+export default function Home({ navigation }) {
+  const [categories, setCategories] = useState(categoryData);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [restaurants, setRestaurants] = useState(restaurantData);
+  const [currentLocation, setCurrentLocation] = useState(
+    initialCurrentLocation
+  );
+
+  // price rating
+  const affordable = 1;
+  const fairPrice = 2;
+  const expensive = 3;
+
   const renderHeader = () => {
     return (
       <View style={styles.header}>
