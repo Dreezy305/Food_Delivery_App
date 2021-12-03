@@ -10,7 +10,7 @@ export const TabBarCustomButton = ({
 }) => {
   var isSelected = accessibilityState.selected;
 
-  console.log(children, "cc");
+  // console.log(children, "cc");
 
   if (isSelected) {
     return (
