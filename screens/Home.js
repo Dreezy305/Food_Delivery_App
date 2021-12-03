@@ -25,15 +25,23 @@ export default function Home() {
         <View
           style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
-          <View>
-            <Text></Text>
+          <View
+            style={{
+              width: "70%",
+              height: "100%",
+              backgroundColor: COLORS.lightGray3,
+              alignItems: "center",
+              borderRadius: SIZES.radius,
+            }}
+          >
+            <Text style={{ ...FONTS.h3, paddingVertical: 10 }}>Location</Text>
           </View>
         </View>
       </View>
     );
   };
 
-  return <SafeAreaView style={styles.container}></SafeAreaView>;
+  return <SafeAreaView style={styles.container}>{renderHeader()}</SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
