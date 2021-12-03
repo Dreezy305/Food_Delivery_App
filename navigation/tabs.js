@@ -6,6 +6,7 @@ import {
 } from "@react-navigation/bottom-tabs";
 import { Home } from "../screens";
 import { COLORS, icons } from "../constants";
+import { TabBarCustomButton } from "../components/TabBarCustomButton";
 
 const Tab = createBottomTabNavigator();
 
@@ -53,6 +54,7 @@ export default function Tabs() {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
 
@@ -71,6 +73,7 @@ export default function Tabs() {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
 
@@ -89,6 +92,7 @@ export default function Tabs() {
               }}
             />
           ),
+          tabBarButton: (props) => <TabBarCustomButton {...props} />,
         }}
       />
     </Tab.Navigator>
