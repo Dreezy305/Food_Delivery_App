@@ -5,7 +5,7 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 
 const styles = StyleSheet.create({});
 
-export const CustomTabBar = () => {
+export const CustomTabBar = (props) => {
   if (isIphoneX()) {
     return (
       <View>
