@@ -18,7 +18,7 @@ export default function Home() {
           <Image
             source={icons.nearby}
             resizeMode="contain"
-            style={{ width: 50, height: 30 }}
+            style={{ width: 30, height: 30 }}
           />
         </TouchableOpacity>
 
@@ -52,7 +52,7 @@ export default function Home() {
           <Image
             source={icons.basket}
             resizeMode="contain"
-            style={{ width: 50, height: 30 }}
+            style={{ width: 30, height: 30 }}
           />
         </TouchableOpacity>
       </View>
