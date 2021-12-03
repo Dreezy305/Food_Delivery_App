@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import Svg, { Path } from "react-native-svg";
+import { COLORS, icons } from "../constants";
 
 export const TabBarCustomButton = ({
   accessibilityState,
@@ -8,6 +9,8 @@ export const TabBarCustomButton = ({
   onPress,
 }) => {
   var isSelected = accessibilityState.selected;
+
+  console.log(children, "cc");
 
   if (isSelected) {
     return (
