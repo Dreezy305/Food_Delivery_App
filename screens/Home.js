@@ -8,18 +8,32 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from "react-native";
-import { COLORS, icons, images, FONTS } from "../constants";
+import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Home() {
   const renderHeader = () => {
-    return <View style={styles.header}></View>;
+    return (
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.touch}>
+          <Image
+            source={icons.nearby}
+            resizeMode="contain"
+            style={{ width: 50, height: 30 }}
+          />
+        </TouchableOpacity>
+
+        <View
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        >
+          <View>
+            <Text></Text>
+          </View>
+        </View>
+      </View>
+    );
   };
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Home View here</Text>
-    </SafeAreaView>
-  );
+  return <SafeAreaView style={styles.container}></SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
@@ -40,5 +54,10 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     height: 50,
+  },
+  touch: {
+    width: 50,
+    paddingLeft: SIZES.padding * 2,
+    justifyContent: "center",
   },
 });
