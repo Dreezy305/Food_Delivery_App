@@ -34,7 +34,11 @@ export default function Home() {
               borderRadius: SIZES.radius,
             }}
           >
-            <Text style={{ ...FONTS.h3, paddingVertical: 10 }}>Location</Text>
+            <Text
+              style={{ ...FONTS.h3, paddingVertical: 10, fontWeight: "bold" }}
+            >
+              Location
+            </Text>
           </View>
         </View>
       </View>
@@ -62,6 +66,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     height: 50,
+    paddingTop: 3,
   },
   touch: {
     width: 50,
