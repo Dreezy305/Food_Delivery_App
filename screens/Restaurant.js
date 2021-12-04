@@ -150,13 +150,37 @@ export default function Restaurant({ route, navigation }) {
                 style={{
                   width: SIZES.width,
                   alignItems: "center",
-                  marginTop: 25,
+                  marginTop: 15,
                   paddingHorizontal: SIZES.padding * 2,
                 }}
               >
-                <Text>
+                {/* NAME */}
+                <Text
+                  style={{
+                    marginVertical: 10,
+                    textAlign: "center",
+                    ...FONTS.h2,
+                  }}
+                >
                   {item.name} - {item.price.toFixed(2)}
                 </Text>
+                {/* DESCRIPTION */}
+                <Text
+                  style={{
+                    textAlign: "center",
+                    ...FONTS.body3,
+                  }}
+                >
+                  {item.description}
+                </Text>
+                {/* CALORIES */}
+                <View style={{ marginTop: 10, flexDirection: "row" }}>
+                  <Image
+                    source={icons.fire}
+                    style={{ width: 20, height: 20, marginRight: 10 }}
+                  />
+                  <Text>{item.calories.toFixed(2)} cal</Text>
+                </View>
               </View>
             </View>
           </>
