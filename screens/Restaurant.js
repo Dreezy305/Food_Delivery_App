@@ -17,6 +17,13 @@ export default function Restaurant({ route, navigation }) {
   const [restaurant, setRestaurant] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
 
+  React.useEffect(() => {
+    let { item, currentLocation } = route.params;
+
+    setRestaurant(item);
+    setCurrentLocation(currentLocation);
+  });
+
   const renderHeader = () => {
     return (
       <View style={styles.header}>
@@ -45,7 +52,9 @@ export default function Restaurant({ route, navigation }) {
               borderRadius: SIZES.radius,
             }}
           >
-            <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
+            <Text style={{ fontSize: 15, fontWeight: "bold" }}>
+              {restaurant?.name}
+            </Text>
           </View>
         </View>
 
@@ -57,7 +66,7 @@ export default function Restaurant({ route, navigation }) {
           }}
         >
           <Image
-            source={icons.basket}
+            source={icons.list}
             resizeMode="contain"
             style={{ width: 30, height: 30 }}
           />
