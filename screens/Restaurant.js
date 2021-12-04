@@ -179,7 +179,9 @@ export default function Restaurant({ route, navigation }) {
                     source={icons.fire}
                     style={{ width: 20, height: 20, marginRight: 10 }}
                   />
-                  <Text>{item.calories.toFixed(2)} cal</Text>
+                  <Text style={{ ...FONTS.body3, color: COLORS.darkgray }}>
+                    {item.calories.toFixed(2)} cal
+                  </Text>
                 </View>
               </View>
             </View>
@@ -189,10 +191,13 @@ export default function Restaurant({ route, navigation }) {
     );
   };
 
+  const renderOrder = () => {};
+
   return (
     <SafeAreaView style={styles.container}>
       {renderHeader()}
       {renderFoodInfo()}
+      {renderOrder()}
     </SafeAreaView>
   );
 }
