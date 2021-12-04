@@ -94,6 +94,15 @@ export default function Restaurant({ route, navigation }) {
                 />
 
                 {/* QUANTITY SECTION */}
+                <View
+                  style={{
+                    position: "absolute",
+                    bottom: -20,
+                    width: SIZES.width,
+                    justifyContent: "center",
+                    flexDirection: "row",
+                  }}
+                ></View>
               </View>
             </View>
           </>
