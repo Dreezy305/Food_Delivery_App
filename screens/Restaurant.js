@@ -13,6 +13,7 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Restaurant({ route, navigation }) {
+  const scrollX = new Animated.Value(0);
   const [restaurant, setRestaurant] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
 
@@ -191,7 +192,11 @@ export default function Restaurant({ route, navigation }) {
     );
   };
 
-  const renderOrder = () => {};
+  const renderDots = () => {};
+
+  const renderOrder = () => {
+    return <View>{renderDots()}</View>;
+  };
 
   return (
     <SafeAreaView style={styles.container}>
