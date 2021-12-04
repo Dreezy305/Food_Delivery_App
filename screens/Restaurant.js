@@ -13,7 +13,7 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Restaurant({ route, navigation }) {
-  // console.log(route.params);
+  console.log(route.params);
   const [restaurant, setRestaurant] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
 
