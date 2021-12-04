@@ -21,7 +21,7 @@ const initialCurrentLocation = {
 };
 
 export default function Home({ navigation }) {
-  console.log(navigation, "vv");
+  // console.log(navigation);
   const [categories, setCategories] = useState(categoryData);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [restaurants, setRestaurants] = useState(restaurantData);
