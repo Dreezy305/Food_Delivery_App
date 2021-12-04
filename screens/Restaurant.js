@@ -113,7 +113,7 @@ export default function Restaurant({ route, navigation }) {
                       borderBottomLeftRadius: 25,
                     }}
                   >
-                    {/* COUNTER */}
+                    {/* COUNTER MINUS BUTTON */}
                     <Text style={{ ...FONTS.body1 }}>-</Text>
                   </TouchableOpacity>
                   {/* QTY DISPLAY */}
@@ -125,8 +125,23 @@ export default function Restaurant({ route, navigation }) {
                       justifyContent: "center",
                     }}
                   >
-                    <Text>5</Text>
+                    <Text style={{ ...FONTS.h2 }}>5</Text>
                   </View>
+
+                  {/* COUNTER PLUS BUTTON */}
+                  <TouchableOpacity
+                    style={{
+                      width: 50,
+                      backgroundColor: COLORS.white,
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderTopRightRadius: 25,
+                      borderBottomRightRadius: 25,
+                    }}
+                  >
+                    {/* COUNTER */}
+                    <Text style={{ ...FONTS.body1 }}>+</Text>
+                  </TouchableOpacity>
                 </View>
               </View>
             </View>
