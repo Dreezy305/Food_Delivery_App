@@ -1,5 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  TouchableOpacity,
+  Animated,
+} from "react-native";
+import { isIphoneX } from "react-native-iphone-x-helper";
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Restaurant() {
