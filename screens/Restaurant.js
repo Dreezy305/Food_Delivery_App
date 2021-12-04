@@ -146,6 +146,18 @@ export default function Restaurant({ route, navigation }) {
               </View>
 
               {/* NAME AND DESCRIPTION */}
+              <View
+                style={{
+                  width: SIZES.width,
+                  alignItems: "center",
+                  marginTop: 25,
+                  paddingHorizontal: SIZES.padding * 2,
+                }}
+              >
+                <Text>
+                  {item.name} - {item.price.toFixed(2)}
+                </Text>
+              </View>
             </View>
           </>
         ))}
