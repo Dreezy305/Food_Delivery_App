@@ -249,7 +249,20 @@ export default function Restaurant({ route, navigation }) {
   };
 
   const renderOrder = () => {
-    return <View>{renderDots()}</View>;
+    return (
+      <View>
+        {renderDots()}{" "}
+        <View
+          style={{
+            backgroundColor: COLORS.white,
+            borderTopLeftRadius: 40,
+            borderTopRightRadius: 40,
+          }}
+        >
+          <View style={{ flexDirection: "row" }}></View>
+        </View>
+      </View>
+    );
   };
 
   return (
