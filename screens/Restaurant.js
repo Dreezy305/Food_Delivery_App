@@ -102,7 +102,32 @@ export default function Restaurant({ route, navigation }) {
                     justifyContent: "center",
                     flexDirection: "row",
                   }}
-                ></View>
+                >
+                  <TouchableOpacity
+                    style={{
+                      width: 50,
+                      backgroundColor: COLORS.white,
+                      alignItems: "center",
+                      justifyContent: "center",
+                      borderTopLeftRadius: 25,
+                      borderBottomLeftRadius: 25,
+                    }}
+                  >
+                    {/* COUNTER */}
+                    <Text style={{ ...FONTS.body1 }}>-</Text>
+                  </TouchableOpacity>
+                  {/* QTY DISPLAY */}
+                  <View
+                    style={{
+                      width: 50,
+                      backgroundColor: COLORS.white,
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <Text>5</Text>
+                  </View>
+                </View>
               </View>
             </View>
           </>
