@@ -1,7 +1,54 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Restaurant() {
+  const renderHeader = () => {
+    return (
+      <View style={styles.header}>
+        <TouchableOpacity style={styles.touch}>
+          <Image
+            source={icons.nearby}
+            resizeMode="contain"
+            style={{ width: 30, height: 30 }}
+          />
+        </TouchableOpacity>
+
+        <View
+          style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+        >
+          <View
+            style={{
+              width: "70%",
+              height: "100%",
+              backgroundColor: COLORS.lightGray3,
+              alignItems: "center",
+              borderRadius: SIZES.radius,
+            }}
+          >
+            <Text style={{ ...FONTS.h3, paddingVertical: 10 }}>
+              {currentLocation.streetName}
+            </Text>
+          </View>
+        </View>
+
+        <TouchableOpacity
+          style={{
+            width: 50,
+            paddingRight: SIZES.padding * 2,
+            justifyContent: "center",
+          }}
+        >
+          <Image
+            source={icons.basket}
+            resizeMode="contain"
+            style={{ width: 30, height: 30 }}
+          />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
   return (
     <View>
       <Text>Restaurant</Text>
