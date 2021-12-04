@@ -1,3 +1,10 @@
+import { COLORS, icons, images, FONTS, SIZES } from "../constants";
+
+// price rating
+const affordable = 1;
+const fairPrice = 2;
+const expensive = 3;
+
 export const categoryData = [
   {
     id: 1,

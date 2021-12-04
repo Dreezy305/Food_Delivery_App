@@ -11,6 +11,15 @@ import {
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 import { categoryData, restaurantData } from "../data/menuList";
 
+// location
+const initialCurrentLocation = {
+  streetName: "Kuching",
+  gps: {
+    latitude: 1.5496614931250685,
+    longitude: 110.36381866919922,
+  },
+};
+
 export default function Home({ navigation }) {
   const [categories, setCategories] = useState(categoryData);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -23,15 +32,6 @@ export default function Home({ navigation }) {
   const affordable = 1;
   const fairPrice = 2;
   const expensive = 3;
-
-  // location
-  const initialCurrentLocation = {
-    streetName: "Kuching",
-    gps: {
-      latitude: 1.5496614931250685,
-      longitude: 110.36381866919922,
-    },
-  };
 
   function onSelectCategory(category) {
     //filter restaurant
@@ -75,10 +75,9 @@ export default function Home({ navigation }) {
               borderRadius: SIZES.radius,
             }}
           >
-            <Text
-              style={{ ...FONTS.h3, paddingVertical: 10, fontWeight: "bold" }}
-            >
+            <Text style={{ ...FONTS.h3, paddingVertical: 10 }}>
               {currentLocation.streetName}
+              Oshodi
             </Text>
           </View>
         </View>
