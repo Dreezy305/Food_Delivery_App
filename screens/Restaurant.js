@@ -144,6 +144,8 @@ export default function Restaurant({ route, navigation }) {
                   </TouchableOpacity>
                 </View>
               </View>
+
+              {/* NAME AND DESCRIPTION */}
             </View>
           </>
         ))}
