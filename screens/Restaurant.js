@@ -75,7 +75,14 @@ export default function Restaurant({ route, navigation }) {
     );
   };
 
-  return <SafeAreaView style={styles.container}>{renderHeader()}</SafeAreaView>;
+  const renderFoodInfo = () => {};
+
+  return (
+    <SafeAreaView style={styles.container}>
+      {renderHeader()}
+      {renderFoodInfo()}
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
