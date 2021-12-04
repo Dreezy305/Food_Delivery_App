@@ -13,7 +13,6 @@ import { isIphoneX } from "react-native-iphone-x-helper";
 import { COLORS, icons, images, FONTS, SIZES } from "../constants";
 
 export default function Restaurant({ route, navigation }) {
-  console.log(route.params);
   const [restaurant, setRestaurant] = useState(null);
   const [currentLocation, setCurrentLocation] = useState(null);
 
@@ -83,7 +82,9 @@ export default function Restaurant({ route, navigation }) {
         scrollEventThrottle={16}
         snapToAlignment="center"
         showsHorizontalScrollIndicator={false}
-      ></Animated.ScrollView>
+      >
+        restaurant?.menu.map()
+      </Animated.ScrollView>
     );
   };
 
