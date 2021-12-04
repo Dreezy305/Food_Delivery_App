@@ -75,7 +75,17 @@ export default function Restaurant({ route, navigation }) {
     );
   };
 
-  const renderFoodInfo = () => {};
+  const renderFoodInfo = () => {
+    return (
+      <Animated.ScrollView
+        horizontal
+        pagingEnabled
+        scrollEventThrottle={16}
+        snapToAlignment="center"
+        showsHorizontalScrollIndicator={false}
+      ></Animated.ScrollView>
+    );
+  };
 
   return (
     <SafeAreaView style={styles.container}>
