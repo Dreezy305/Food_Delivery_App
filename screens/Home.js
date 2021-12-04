@@ -77,7 +77,6 @@ export default function Home({ navigation }) {
           >
             <Text style={{ ...FONTS.h3, paddingVertical: 10 }}>
               {currentLocation.streetName}
-              Oshodi
             </Text>
           </View>
         </View>
