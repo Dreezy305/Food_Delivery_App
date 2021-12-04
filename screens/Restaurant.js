@@ -67,4 +67,15 @@ export default function Restaurant() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  touch: {
+    width: 50,
+    paddingLeft: SIZES.padding * 2,
+    justifyContent: "center",
+  },
+  header: {
+    flexDirection: "row",
+    height: 50,
+    paddingTop: 3,
+  },
+});
