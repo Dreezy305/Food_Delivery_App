@@ -92,6 +92,8 @@ export default function Restaurant({ route, navigation }) {
                   resizeMode="cover"
                   style={{ width: SIZES.width, height: "100%" }}
                 />
+
+                {/* QUANTITY SECTION */}
               </View>
             </View>
           </>
