@@ -251,7 +251,7 @@ export default function Restaurant({ route, navigation }) {
   const renderOrder = () => {
     return (
       <View>
-        {renderDots()}{" "}
+        {renderDots()}
         <View
           style={{
             backgroundColor: COLORS.white,
@@ -259,7 +259,41 @@ export default function Restaurant({ route, navigation }) {
             borderTopRightRadius: 40,
           }}
         >
-          <View style={{ flexDirection: "row" }}></View>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              paddingHorizontal: SIZES.padding * 3,
+              paddingVertical: SIZES.padding * 2,
+              borderBottomColor: COLORS.lightGray2,
+              borderBottomWidth: 1,
+            }}
+          >
+            <Text style={{ ...FONTS.h3 }}> items in the cart</Text>
+            <Text style={{ ...FONTS.h3 }}>$45</Text>
+          </View>
+
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              paddingHorizontal: SIZES.padding * 3,
+              paddingVertical: SIZES.padding * 2,
+            }}
+          >
+            <View style={{ flexDirection: "row" }}>
+              <Image
+                source={icons.pin}
+                style={{ width: 20, height: 20, tintColor: COLORS.darkgray }}
+                resizeMode="contain"
+              />
+
+              <Text style={{ marginLeft: SIZES.padding, ...FONTS }}>
+                location
+              </Text>
+            </View>
+            <View style={{ flexDirection: "row" }}></View>
+          </View>
         </View>
       </View>
     );
