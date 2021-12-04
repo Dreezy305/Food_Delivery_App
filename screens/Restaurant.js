@@ -83,7 +83,19 @@ export default function Restaurant({ route, navigation }) {
         snapToAlignment="center"
         showsHorizontalScrollIndicator={false}
       >
-        restaurant?.menu.map()
+        {restaurant?.menu.map((item, index) => (
+          <>
+            <View key={`menu-${index}`} style={{ alignItems: "center" }}>
+              <View style={{ height: SIZES.height * 0.35 }}>
+                <Image
+                  source={item.photo}
+                  resizeMode="cover"
+                  style={{ width: SIZES.width, height: "100%" }}
+                />
+              </View>
+            </View>
+          </>
+        ))}
       </Animated.ScrollView>
     );
   };
