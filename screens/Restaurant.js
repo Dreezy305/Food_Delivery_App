@@ -82,7 +82,7 @@ const Restaurant = ({ route, navigation }) => {
 
   function renderHeader() {
     return (
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row", marginTop: 30 }}>
         <TouchableOpacity
           style={{
             width: 50,
@@ -119,7 +119,7 @@ const Restaurant = ({ route, navigation }) => {
               backgroundColor: COLORS.lightGray3,
             }}
           >
-            <Text style={{ ...FONTS.h3 }}>{restaurant?.name}</Text>
+            <Text style={{ ...FONTS.h3, padding: 10 }}>{restaurant?.name}</Text>
           </View>
         </View>
 
